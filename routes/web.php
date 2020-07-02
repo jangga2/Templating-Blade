@@ -13,20 +13,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
+// Route::get('/welcome', function () {
+//     return view('welcome');
+// });
 
-Route::get('/register', function () {
-    return view('form');
-});
+// Route::get('/register', function () {
+//     return view('form');
+// });
 
 Route::get('/', function () {
-    return view('index');
+    return view('adminlte.contents.progress');
 });
 
-Route::get('/register', 'RegisterController@form');
+// Route::get('/register', 'RegisterController@form');
 
-Route::get('/sapa', 'RegisterController@sapa');
+// Route::get('/sapa', 'RegisterController@sapa');
 
-Route::post('/sapa', 'RegisterController@sapa_post');
+// Route::post('/sapa', 'RegisterController@sapa_post');
+
+Route::get('/master', function () {
+    return view('adminlte.master');
+});
+
+Route::get('/data-tables', function () {
+    return view('adminlte.contents.datatables');
+});
